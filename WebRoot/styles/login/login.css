@@ -1,0 +1,64 @@
+body{background-color: #266db9;display: flex;align-items: center;}
+.input_control{
+  width: 16rem;
+  margin: 1.16rem auto;
+  padding-left: 0.5rem;
+  align-items: center;
+  background-color: #dedede;
+  color: #959595;
+}
+.text,#btn1,#btn2{
+  box-sizing: border-box;
+  font-size: 0.92rem;
+  height: 2.40rem;
+  border-radius: 4px;
+  background-color: #dedede;
+  border:1px solid #dedede;
+  color: #6a6f77;
+  -web-kit-appearance:none;
+  -moz-appearance: none;
+  display: block;
+  outline: 0;
+  padding: 0 1em;
+  text-decoration: none;
+  width: 100%;
+}
+.text:focus{
+  border: 1px solid #ff7496;
+}
+.login{width: 100%;background-color: #fc6f06;border: none;padding: 0.6rem 0px;color: #ffffff;font-size: 0.92rem;}
+.exegesis{font-size: 0.8rem;color: #9f9f9f;text-align: right;padding-top: 1.02rem;}
+
+.sc-disflex{display: flex;}
+.sc-flex{flex: 1;}
+.sc-align{align-items: center;}
+.sc-borbottom-bfbfbf{border-bottom: 1px solid #bfbfbf;}
+.sc-radius{border-radius: 10px;}
+
+.sc-pt15{padding-top: 0.58rem;}
+
+.sc-pb15{padding-bottom: 0.58rem;}
+
+.sc-pl26{padding-left: 1rem;}
+
+.sc-pr26{padding-right: 1rem;}
+
+.sc-fs30{font-size: 1.16rem;}
+
+.sc-fs-333{color: #333333;}
+
+.sc-bg-fff{background-color: #ffffff;}
+.sc-bg-266db9{background-color: #266db9;}
+.sc-bg-dedede{background-color: #dedede;}
+
+#images{
+	margin: auto;
+	width: 610px;
+	height: 364px;
+	display: flex;
+	align-items: center;
+	line-height: 7.2rem;
+	}
+#images .img {
+	width: 100%;
+}

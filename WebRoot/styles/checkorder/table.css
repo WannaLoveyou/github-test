@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.table{
+    border: 1px solid silver;
+    width: 90%;
+    border-collapse:collapse;
+
+}
+.table td{
+    width: 10%;
+    border:  1px solid silver;
+    padding-top:2% ;
+    font: 16px Tahoma,Helvetica,Arial,'STHeiti';
+    font-weight: 400;
+    height: 10%;
+
+
+
+}
+h2 h3 h4 {
+    font-weight: bold;
+}
+
+.table p{
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+
+
+}
+input{
+
+
+    border: 0px;
+}
+p{
+    letter-spacing: 2px;
+}
+
+
+
+
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+ 
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+ 
+   <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.EnhancedPatternLayout">
+			<param name="ConversionPattern" value="[%p] %d{yyyy-MM-dd HH:mm:ss}] [%l] - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">  
+           <param name="LevelMin" value="DEBUG"/>  
+            <param name="LevelMax" value="ERROR"/>  
+    </filter> 
+	</appender>
+	<!-- This appender prints all that is shown in console to file -->
+	<appender name="INFO_TO_FILE" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="${log4j.home}info.log" />
+		<param name="maxFileSize" value="2000KB" />
+		<param name="maxBackupIndex" value="2000" />
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.EnhancedPatternLayout">
+			<param name="ConversionPattern" value="[%p] %d{yyyy-MM-dd HH:mm:ss}] [%l] - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">  
+            <param name="LevelMin" value="INFO"/>  
+            <param name="LevelMax" value="INFO"/>  
+        </filter>  
+	</appender>
+	<!-- This appender accepts only messages with exceptions and logs them to 
+		separate file -->
+	<appender name="ERROR_APPENDER" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="${log4j.home}errors.log" />
+		<param name="maxFileSize" value="5000KB" />
+		<param name="maxBackupIndex" value="100" />
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.EnhancedPatternLayout">
+			<param name="ConversionPattern" value="[%p] %d{yyyy-MM-dd HH:mm:ss}] [%l] - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">  
+            <param name="LevelMin" value="ERROR"/>  
+            <param name="LevelMax" value="ERROR"/>  
+        </filter> 
+	</appender>
+	<!-- Root Logger -->
+	<root>
+		<priority value="info" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="INFO_TO_FILE" />
+		<appender-ref ref="ERROR_APPENDER" />
+	</root>
+     
+</log4j:configuration>
